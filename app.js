@@ -19,7 +19,7 @@ function saveGithubConfig(cfg) {
 }
 
 // ---- PASSWORDS ----
-const PUBLIC_PWD = 'parichay2024';
+const PUBLIC_PWD = '3192';
 const ADMIN_PWD  = 'ganesh@admin';
 
 // ---- LOCAL CACHE KEY (for offline fallback) ----
