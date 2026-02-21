@@ -254,31 +254,31 @@
   "contacts": [
     {
       "name": {
-        "mr": "श्री. विनायक देशपांडे",
-        "en": "Shri. Vinayak Deshpande"
+        "mr": "श्री. महादेव  गायकवाड",
+        "en": "Mr Mahadev Gaikwad"
       },
       "relation": {
         "mr": "वडील",
         "en": "Father"
       },
-      "phone": "+91 98765 43210"
+      "phone": "9075997060"
     },
     {
       "name": {
-        "mr": "श्री. राहुल देशपांडे",
-        "en": "Shri. Rahul Deshpande"
+        "mr": "सौरभ गायकवाड",
+        "en": "Saurabh Gaikwad"
       },
       "relation": {
-        "mr": "स्वतः",
+        "mr": "स्वत",
         "en": "Self"
       },
-      "phone": "+91 91234 56789"
+      "phone": "9689593192"
     }
   ],
-  "whatsapp": "919123456789",
+  "whatsapp": "919689593192",
   "mapLink": "https://maps.google.com/?q=Pune,Maharashtra",
   "address": {
-    "mr": "मु. पो. शिरूर, ता. शिरूर, जि. पुणे - 412210",
-    "en": "Shirur, Taluka Shirur, Dist. Pune - 412210"
+    "mr": "मु. पो. बुकी  ता. परंडा  जि. धाराशीव   - 410235",
+    "en": "At Buki Tal Paranda D. Dharashiv - 410235"
   }
 }
