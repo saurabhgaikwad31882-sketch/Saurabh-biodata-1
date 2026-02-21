@@ -82,8 +82,8 @@
   "family": {
     "father": {
       "name": {
-        "mr": "श्री. विनायक रामचंद्र देशपांडे",
-        "en": "Shri. Vinayak Ramchandra Deshpande"
+        "mr": "श्री. महादेव श्रीरंग गायकवाड",
+        "en": "Shri. Mahadev Shrirang Gaikwad"
       },
       "occupation": {
         "mr": "शेती व्यवसाय",
@@ -92,8 +92,8 @@
     },
     "mother": {
       "name": {
-        "mr": "सौ. सुनीता विनायक देशपांडे",
-        "en": "Sau. Sunita Vinayak Deshpande"
+        "mr": "सौ. वंदना महादेव गायकवाड",
+        "en": "Sau. Vandana Mahadev गायकवाड"
       },
       "occupation": {
         "mr": "गृहिणी",
@@ -103,16 +103,30 @@
     "sisters": [
       {
         "name": {
-          "mr": "कु. प्रिया देशपांडे",
-          "en": "Ku. Priya Deshpande"
+          "mr": "सौ. अश्विनी रामचंद्र भोसले",
+          "en": "Ashwini Ramchandra Bhosale"
         },
         "occupation": {
-          "mr": "शिक्षिका",
-          "en": "Teacher"
+          "mr": "रोसा",
+          "en": "Rosa"
         },
         "married": {
-          "mr": "अविवाहित",
-          "en": "Unmarried"
+          "mr": "विवाहित",
+          "en": "Married"
+        }
+      },
+      {
+        "name": {
+          "mr": "रोहिणी सौरभ पोळ",
+          "en": "Rohini Saurabh Pol"
+        },
+        "occupation": {
+          "mr": "नर्ले",
+          "en": "Nerle"
+        },
+        "married": {
+          "mr": "विवहीत",
+          "en": "Married"
         }
       }
     ],
@@ -120,21 +134,121 @@
     "mamas": [
       {
         "name": {
-          "mr": "श्री. सुभाष जोशी",
-          "en": "Shri. Subhash Joshi"
+          "mr": "श्री.रामेश्वर दिगंबर रोडगे",
+          "en": "Mr. Rameshwar Digambar Rodage"
         },
         "relation": {
-          "mr": "मामा",
-          "en": "Maternal Uncle"
+          "mr": "",
+          "en": ""
         },
         "location": {
-          "mr": "पुणे",
-          "en": "Pune"
+          "mr": "बावची",
+          "en": "Bawchi"
+        }
+      },
+      {
+        "name": {
+          "mr": "श्री.सिद्धेश्वर दिगंबर रोडगे",
+          "en": "Mr. Siddheswar  Digamber Rodage"
+        },
+        "relation": {
+          "mr": "",
+          "en": ""
+        },
+        "location": {
+          "mr": "बावची",
+          "en": "Bawchi"
         }
       }
     ],
-    "mushis": [],
-    "chultas": []
+    "mushis": [
+      {
+        "name": {
+          "mr": "सौ. चंद्रकला उत्तम गायकवाड",
+          "en": "Chandrakala Uttam Gaikwad"
+        },
+        "relation": {
+          "mr": "",
+          "en": ""
+        },
+        "location": {
+          "mr": "बुकी",
+          "en": "Buki"
+        }
+      },
+      {
+        "name": {
+          "mr": "सौ. नंदा तुकाराम अंधारे",
+          "en": "Nandana Tukaram Andhare"
+        },
+        "relation": {
+          "mr": "",
+          "en": ""
+        },
+        "location": {
+          "mr": "भांडगाव",
+          "en": "Bhandgaon"
+        }
+      }
+    ],
+    "chultas": [
+      {
+        "name": {
+          "mr": "श्री. गौतम गायकवाड",
+          "en": "Mr Gautam Gaikwad"
+        },
+        "occupation": {
+          "mr": "",
+          "en": ""
+        },
+        "location": {
+          "mr": "",
+          "en": ""
+        }
+      },
+      {
+        "name": {
+          "mr": "श्री.उत्तम गायकवाड",
+          "en": "Mr Uttam Gaikwad"
+        },
+        "occupation": {
+          "mr": "",
+          "en": ""
+        },
+        "location": {
+          "mr": "",
+          "en": ""
+        }
+      },
+      {
+        "name": {
+          "mr": "श्री.विष्णु गायकवाड",
+          "en": "Mr Vishnu Gaikwad"
+        },
+        "occupation": {
+          "mr": "",
+          "en": ""
+        },
+        "location": {
+          "mr": "",
+          "en": ""
+        }
+      },
+      {
+        "name": {
+          "mr": "श्री.बाळासाहेब गायकवाड",
+          "en": "Mr  Babasaheb Gaikwad"
+        },
+        "occupation": {
+          "mr": "",
+          "en": ""
+        },
+        "location": {
+          "mr": "",
+          "en": ""
+        }
+      }
+    ]
   },
   "gallery": [],
   "contacts": [
