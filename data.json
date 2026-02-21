@@ -53,16 +53,16 @@
   },
   "education": {
     "qualification": {
-      "mr": "B.E. (Computer Engineering)",
-      "en": "B.E. (Computer Engineering)"
+      "mr": "B.E. ( मेकॅनिकल इंजीनियर )",
+      "en": "B.E. (Mechanical  Engineering)"
     },
     "college": {
-      "mr": "Pune University",
-      "en": "Pune University"
+      "mr": "शासकीय अभियांत्रिकी व संशोधन महाविद्यालय (अवसरी, पुणे)",
+      "en": "Government College of Engineering and Research, Avasari Khurd"
     },
     "passingYear": {
-      "mr": "2018",
-      "en": "2018"
+      "mr": "2018-2022",
+      "en": "2018-2022"
     }
   },
   "career": {
