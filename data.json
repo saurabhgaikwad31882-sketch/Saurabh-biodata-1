@@ -1,0 +1,170 @@
+{
+  "name": {
+    "mr": "श्री. राहुल विनायक देशपांडे",
+    "en": "Mr. Rahul Vinayak Deshpande"
+  },
+  "personal": {
+    "dob": {
+      "mr": "15 जून 1996",
+      "en": "15 June 1996"
+    },
+    "height": {
+      "mr": "5 फूट 8 इंच (172 cm)",
+      "en": "5 ft 8 in (172 cm)"
+    },
+    "colour": {
+      "mr": "गोरा (Fair)",
+      "en": "Fair"
+    },
+    "jatDharma": {
+      "mr": "मराठा / Hindu",
+      "en": "Maratha / Hindu"
+    },
+    "kuldaivat": {
+      "mr": "श्री. भवानी माता",
+      "en": "Shri Bhavani Mata"
+    },
+    "devak": {
+      "mr": "नारळ",
+      "en": "Coconut"
+    },
+    "bloodGroup": {
+      "mr": "B+",
+      "en": "B+"
+    }
+  },
+  "horoscope": {
+    "gan": {
+      "mr": "देव गण",
+      "en": "Dev Gan"
+    },
+    "nadi": {
+      "mr": "अंत्य नाडी",
+      "en": "Antya Nadi"
+    },
+    "janmanakshatra": {
+      "mr": "रोहिणी",
+      "en": "Rohini"
+    },
+    "jamvel": {
+      "mr": "रात्री 11:30",
+      "en": "Night 11:30"
+    }
+  },
+  "education": {
+    "qualification": {
+      "mr": "B.E. (Computer Engineering)",
+      "en": "B.E. (Computer Engineering)"
+    },
+    "college": {
+      "mr": "Pune University",
+      "en": "Pune University"
+    },
+    "passingYear": {
+      "mr": "2018",
+      "en": "2018"
+    }
+  },
+  "career": {
+    "company": {
+      "mr": "TCS India Pvt. Ltd.",
+      "en": "TCS India Pvt. Ltd."
+    },
+    "designation": {
+      "mr": "Software Engineer",
+      "en": "Software Engineer"
+    },
+    "salary": {
+      "mr": "₹ 8,50,000 / वार्षिक",
+      "en": "₹ 8,50,000 / Annually"
+    }
+  },
+  "family": {
+    "father": {
+      "name": {
+        "mr": "श्री. विनायक रामचंद्र देशपांडे",
+        "en": "Shri. Vinayak Ramchandra Deshpande"
+      },
+      "occupation": {
+        "mr": "शेती व्यवसाय",
+        "en": "Farming"
+      }
+    },
+    "mother": {
+      "name": {
+        "mr": "सौ. सुनीता विनायक देशपांडे",
+        "en": "Sau. Sunita Vinayak Deshpande"
+      },
+      "occupation": {
+        "mr": "गृहिणी",
+        "en": "Homemaker"
+      }
+    },
+    "sisters": [
+      {
+        "name": {
+          "mr": "कु. प्रिया देशपांडे",
+          "en": "Ku. Priya Deshpande"
+        },
+        "occupation": {
+          "mr": "शिक्षिका",
+          "en": "Teacher"
+        },
+        "married": {
+          "mr": "अविवाहित",
+          "en": "Unmarried"
+        }
+      }
+    ],
+    "brothers": [],
+    "mamas": [
+      {
+        "name": {
+          "mr": "श्री. सुभाष जोशी",
+          "en": "Shri. Subhash Joshi"
+        },
+        "relation": {
+          "mr": "मामा",
+          "en": "Maternal Uncle"
+        },
+        "location": {
+          "mr": "पुणे",
+          "en": "Pune"
+        }
+      }
+    ],
+    "mushis": [],
+    "chultas": []
+  },
+  "gallery": [],
+  "contacts": [
+    {
+      "name": {
+        "mr": "श्री. विनायक देशपांडे",
+        "en": "Shri. Vinayak Deshpande"
+      },
+      "relation": {
+        "mr": "वडील",
+        "en": "Father"
+      },
+      "phone": "+91 98765 43210"
+    },
+    {
+      "name": {
+        "mr": "श्री. राहुल देशपांडे",
+        "en": "Shri. Rahul Deshpande"
+      },
+      "relation": {
+        "mr": "स्वतः",
+        "en": "Self"
+      },
+      "phone": "+91 91234 56789"
+    }
+  ],
+  "whatsapp": "919123456789",
+  "mapLink": "https://maps.google.com/?q=Pune,Maharashtra",
+  "address": {
+    "mr": "मु. पो. शिरूर, ता. शिरूर, जि. पुणे - 412210",
+    "en": "Shirur, Taluka Shirur, Dist. Pune - 412210"
+  }
+}

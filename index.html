@@ -1,0 +1,731 @@
+<!DOCTYPE html>
+<html lang="mr">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>परिचयपत्र — Parichay Patra</title>
+  <link rel="stylesheet" href="style.css"/>
+</head>
+<body>
+
+<!-- ============================================
+     PUBLIC PASSWORD GATE
+     ============================================ -->
+<div id="public-gate">
+  <div class="gate-box">
+    <!-- Ganesh Symbol -->
+    <div class="gate-ganesh">
+      <svg viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+        <!-- Simplified stylised Om/Ganesha icon -->
+        <text x="50" y="72" text-anchor="middle" font-size="68" font-family="serif" fill="#5C1010">ॐ</text>
+      </svg>
+    </div>
+
+    <div class="gate-title">परिचयपत्र</div>
+    <div class="gate-sub">हे पृष्ठ पाहण्यासाठी पासवर्ड आवश्यक आहे<br><small style="font-family:'Jost',sans-serif;font-size:0.8rem;">Password required to view this biodata</small></div>
+
+    <div class="gate-label">पासवर्ड / Password</div>
+    <div class="gate-input-wrap">
+      <svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+        <rect x="3" y="11" width="18" height="11" rx="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/>
+      </svg>
+      <input class="gate-input" type="password" id="gatePwdInput" placeholder="पासवर्ड टाका..." autocomplete="off"/>
+    </div>
+    <button class="gate-btn" onclick="checkPublicPassword()">प्रवेश करा &nbsp;→</button>
+    <div class="gate-error" id="gateError">❌ चुकीचा पासवर्ड. पुन्हा प्रयत्न करा.</div>
+    <div class="gate-hint">संपर्क व्यक्तीकडून पासवर्ड मिळवा</div>
+  </div>
+</div>
+
+
+<!-- ============================================
+     PUBLIC PAGE
+     ============================================ -->
+<div id="public-page">
+
+  <!-- HEADER -->
+  <header id="site-header">
+    <div class="header-top-bar">
+
+      <!-- Left: Ganesh -->
+      <div class="header-ganesh">
+        <div class="ganesh-img-wrap" title="श्री गणेश">
+          <svg viewBox="0 0 80 80" xmlns="http://www.w3.org/2000/svg">
+            <text x="40" y="58" text-anchor="middle" font-size="52" font-family="serif" fill="#5C1010">ॐ</text>
+          </svg>
+        </div>
+        <div class="header-ganesh-text">
+          <span class="ganesh-label">॥ श्री गणेशाय नमः ॥</span>
+          <span class="ganesh-name">श्री गणेश</span>
+        </div>
+      </div>
+
+      <!-- Center: Title -->
+      <div class="header-title-block">
+        <h1 id="mainHeading">परिचयपत्र</h1>
+        <div class="title-sub" id="mainHeadingSub">Parichay Patra</div>
+      </div>
+
+      <!-- Right: Language Toggle -->
+      <button class="lang-toggle" onclick="toggleLang()" title="भाषा बदला / Change Language">
+        <svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/>
+          <path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/>
+        </svg>
+        <span id="langCurrent">मराठी</span>
+        <span>|</span>
+        <span id="langNext">EN</span>
+      </button>
+    </div>
+
+    <!-- Name Banner -->
+    <div class="header-name-bar">
+      <div class="ornament">— ✦ —</div>
+      <div class="candidate-name" id="candidateName">श्री. राहुल विनायक देशपांडे</div>
+      <div class="candidate-name-sub">वधू / वर परिचयपत्र</div>
+      <div class="ornament">— ✦ —</div>
+    </div>
+  </header>
+
+  <div class="gold-divider"></div>
+
+  <div class="page-wrapper">
+
+    <!-- 1. PERSONAL INFO -->
+    <section class="info-section" style="animation-delay:0.05s">
+      <div class="section-header">
+        <div class="sec-icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/>
+          </svg>
+        </div>
+        <h2><span id="sec-personal">वैयक्तिक माहिती</span><small>Personal Information</small></h2>
+      </div>
+      <div class="section-body">
+        <div class="info-grid">
+
+          <div class="info-item" id="item-dob">
+            <div class="item-icon"><svg viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="18" rx="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/><path d="M8 14h.01M12 14h.01M16 14h.01"/></svg></div>
+            <div><div class="info-item-label">जन्म दिनांक</div><div class="info-item-value">—</div></div>
+          </div>
+
+          <div class="info-item" id="item-height">
+            <div class="item-icon"><svg viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21.3 8.7 8.7 21.3c-1 1-2.5 1-3.4 0l-2.6-2.6c-1-1-1-2.5 0-3.4L15.3 2.7c1-1 2.5-1 3.4 0l2.6 2.6c1 1 1 2.5 0 3.4Z"/><path d="m7.5 10.5 2 2"/><path d="m10.5 7.5 2 2"/><path d="m13.5 4.5 2 2"/></svg></div>
+            <div><div class="info-item-label">उंची</div><div class="info-item-value">—</div></div>
+          </div>
+
+          <div class="info-item" id="item-colour">
+            <div class="item-icon"><svg viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="13.5" cy="6.5" r=".5" fill="white"/><circle cx="17.5" cy="10.5" r=".5" fill="white"/><circle cx="8.5" cy="7.5" r=".5" fill="white"/><circle cx="6.5" cy="12.5" r=".5" fill="white"/><path d="M12 2C6.5 2 2 6.5 2 12s4.5 10 10 10c.926 0 1.648-.746 1.648-1.688 0-.437-.18-.835-.437-1.125-.29-.289-.438-.652-.438-1.125a1.64 1.64 0 0 1 1.668-1.668h1.996c3.051 0 5.555-2.503 5.555-5.554C21.965 6.012 17.461 2 12 2z"/></svg></div>
+            <div><div class="info-item-label">वर्ण</div><div class="info-item-value">—</div></div>
+          </div>
+
+          <div class="info-item" id="item-jat">
+            <div class="item-icon"><svg viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 22V6a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2v16"/><path d="M3 22H21"/><path d="M12 2v4"/><path d="M9 22V12h6v10"/></svg></div>
+            <div><div class="info-item-label">जात / धर्म</div><div class="info-item-value">—</div></div>
+          </div>
+
+          <div class="info-item" id="item-kuldaivat">
+            <div class="item-icon"><svg viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M8.5 14.5A2.5 2.5 0 0 0 11 12c0-1.38-.5-2-1-3-1.072-2.143-.224-4.054 2-6 .5 2.5 2 4.9 4 6.5 2 1.6 3 3.5 3 5.5a7 7 0 1 1-14 0c0-1.153.433-2.294 1-3a2.5 2.5 0 0 0 2.5 2.5z"/></svg></div>
+            <div><div class="info-item-label">कुलदैवत</div><div class="info-item-value">—</div></div>
+          </div>
+
+          <div class="info-item" id="item-devak">
+            <div class="item-icon"><svg viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M11 20A7 7 0 0 1 9.8 6.1C15.5 5 17 4.48 19 2c1 2 2 4.18 2 8 0 5.5-4.78 10-10 10Z"/><path d="M2 21c0-3 1.85-5.36 5.08-6C9.5 14.52 12 13 13 12"/></svg></div>
+            <div><div class="info-item-label">देवक</div><div class="info-item-value">—</div></div>
+          </div>
+
+          <div class="info-item" id="item-blood">
+            <div class="item-icon"><svg viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2.69l5.66 5.66a8 8 0 1 1-11.31 0z"/></svg></div>
+            <div><div class="info-item-label">रक्तगट</div><div class="info-item-value">—</div></div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- 2. HOROSCOPE -->
+    <section class="info-section" style="animation-delay:0.10s">
+      <div class="section-header">
+        <div class="sec-icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+            <polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/>
+          </svg>
+        </div>
+        <h2><span id="sec-horo">जन्मकुंडली माहिती</span><small>Horoscope Information</small></h2>
+      </div>
+      <div class="section-body">
+        <div class="info-grid">
+
+          <div class="info-item" id="item-gan">
+            <div class="item-icon"><svg viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3a6 6 0 0 0 9 9 9 9 0 1 1-9-9Z"/></svg></div>
+            <div><div class="info-item-label">गण</div><div class="info-item-value">—</div></div>
+          </div>
+
+          <div class="info-item" id="item-nadi">
+            <div class="item-icon"><svg viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M2 6c.6.5 1.2 1 2.5 1C7 7 7 5 9.5 5c2.6 0 2.4 2 5 2 2.5 0 2.5-2 5-2 1.3 0 1.9.5 2.5 1"/><path d="M2 12c.6.5 1.2 1 2.5 1 2.5 0 2.5-2 5-2 2.6 0 2.4 2 5 2 2.5 0 2.5-2 5-2 1.3 0 1.9.5 2.5 1"/><path d="M2 18c.6.5 1.2 1 2.5 1 2.5 0 2.5-2 5-2 2.6 0 2.4 2 5 2 2.5 0 2.5-2 5-2 1.3 0 1.9.5 2.5 1"/></svg></div>
+            <div><div class="info-item-label">नाडी</div><div class="info-item-value">—</div></div>
+          </div>
+
+          <div class="info-item" id="item-nakshatra">
+            <div class="item-icon"><svg viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg></div>
+            <div><div class="info-item-label">जन्मनक्षत्र</div><div class="info-item-value">—</div></div>
+          </div>
+
+          <div class="info-item" id="item-jamvel">
+            <div class="item-icon"><svg viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg></div>
+            <div><div class="info-item-label">जन्मवेळ</div><div class="info-item-value">—</div></div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- 3. EDUCATION -->
+    <section class="info-section" style="animation-delay:0.15s">
+      <div class="section-header">
+        <div class="sec-icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M22 10v6M2 10l10-5 10 5-10 5z"/><path d="M6 12v5c3 3 9 3 12 0v-5"/>
+          </svg>
+        </div>
+        <h2><span id="sec-edu">शैक्षणिक माहिती</span><small>Educational Information</small></h2>
+      </div>
+      <div class="section-body">
+        <div class="info-grid">
+
+          <div class="info-item" id="item-qual">
+            <div class="item-icon"><svg viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/><polyline points="10 9 9 9 8 9"/></svg></div>
+            <div><div class="info-item-label">शैक्षणिक पात्रता</div><div class="info-item-value">—</div></div>
+          </div>
+
+          <div class="info-item" id="item-college">
+            <div class="item-icon"><svg viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 22V6a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2v16"/><path d="M3 22H21"/><path d="M12 2v4"/><path d="M9 22V12h6v10"/></svg></div>
+            <div><div class="info-item-label">महाविद्यालय</div><div class="info-item-value">—</div></div>
+          </div>
+
+          <div class="info-item" id="item-year">
+            <div class="item-icon"><svg viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="18" rx="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg></div>
+            <div><div class="info-item-label">उत्तीर्ण वर्ष</div><div class="info-item-value">—</div></div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- 4. CAREER -->
+    <section class="info-section" style="animation-delay:0.20s">
+      <div class="section-header">
+        <div class="sec-icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+            <rect x="2" y="7" width="20" height="14" rx="2"/><path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"/>
+          </svg>
+        </div>
+        <h2><span id="sec-career">नोकरी / व्यवसाय</span><small>Career / Occupation</small></h2>
+      </div>
+      <div class="section-body">
+        <div class="info-grid">
+
+          <div class="info-item" id="item-company">
+            <div class="item-icon"><svg viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="4" y="2" width="16" height="20" rx="2"/><path d="M9 22v-4h6v4"/><path d="M8 6h.01M16 6h.01M12 6h.01M12 10h.01M8 10h.01M16 10h.01"/></svg></div>
+            <div><div class="info-item-label">कंपनी</div><div class="info-item-value">—</div></div>
+          </div>
+
+          <div class="info-item" id="item-desig">
+            <div class="item-icon"><svg viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3.85 8.62a4 4 0 0 1 4.78-4.77 4 4 0 0 1 6.74 0 4 4 0 0 1 4.78 4.78 4 4 0 0 1 0 6.74 4 4 0 0 1-4.77 4.78 4 4 0 0 1-6.75 0 4 4 0 0 1-4.78-4.77 4 4 0 0 1 0-6.76Z"/><line x1="12" y1="8" x2="12" y2="12"/><line x1="12" y1="16" x2="12.01" y2="16"/></svg></div>
+            <div><div class="info-item-label">पद (Designation)</div><div class="info-item-value">—</div></div>
+          </div>
+
+          <div class="info-item" id="item-salary">
+            <div class="item-icon"><svg viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="12" y1="1" x2="12" y2="23"/><path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/></svg></div>
+            <div><div class="info-item-label">वार्षिक वेतन</div><div class="info-item-value">—</div></div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- 5. FAMILY -->
+    <section class="info-section" style="animation-delay:0.25s">
+      <div class="section-header">
+        <div class="sec-icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+            <path d="m3 9 9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/>
+          </svg>
+        </div>
+        <h2><span id="sec-family">कौटुंबिक माहिती</span><small>Family Information</small></h2>
+      </div>
+      <div class="section-body">
+
+        <div class="family-sub-section">
+          <div class="family-label">
+            <h3><span class="fl-icon"><svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg></span> <span id="fl-father">वडील (Father)</span></h3>
+          </div>
+          <div class="family-cards-row" id="family-father"></div>
+        </div>
+
+        <div class="family-sub-section">
+          <div class="family-label">
+            <h3><span class="fl-icon"><svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg></span> <span id="fl-mother">आई (Mother)</span></h3>
+          </div>
+          <div class="family-cards-row" id="family-mother"></div>
+        </div>
+
+        <div class="family-sub-section">
+          <div class="family-label">
+            <h3><span class="fl-icon"><svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg></span> <span id="fl-sisters">बहिणी (Sisters)</span></h3>
+          </div>
+          <div class="family-cards-row" id="family-sisters"></div>
+        </div>
+
+        <div class="family-sub-section">
+          <div class="family-label">
+            <h3><span class="fl-icon"><svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg></span> <span id="fl-brothers">भाऊ (Brothers)</span></h3>
+          </div>
+          <div class="family-cards-row" id="family-brothers"></div>
+        </div>
+
+        <div class="family-sub-section">
+          <div class="family-label">
+            <h3><span class="fl-icon"><svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg></span> <span id="fl-mamas">मामा</span></h3>
+          </div>
+          <div class="family-cards-row" id="family-mamas"></div>
+        </div>
+
+        <div class="family-sub-section">
+          <div class="family-label">
+            <h3><span class="fl-icon"><svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg></span> <span id="fl-mushis">मावशी</span></h3>
+          </div>
+          <div class="family-cards-row" id="family-mushis"></div>
+        </div>
+
+        <div class="family-sub-section">
+          <div class="family-label">
+            <h3><span class="fl-icon"><svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg></span> <span id="fl-chultas">चुलते (Paternal Uncles)</span></h3>
+          </div>
+          <div class="family-cards-row" id="family-chultas"></div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- 6. GALLERY -->
+    <section class="info-section" style="animation-delay:0.30s">
+      <div class="section-header">
+        <div class="sec-icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M14.5 4h-5L7 7H4a2 2 0 0 0-2 2v9a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V9a2 2 0 0 0-2-2h-3l-2.5-3z"/><circle cx="12" cy="13" r="3"/>
+          </svg>
+        </div>
+        <h2><span id="sec-gallery">छायाचित्र दालन</span><small>Photo Gallery</small></h2>
+      </div>
+      <div class="section-body">
+        <div class="gallery-grid" id="gallery-grid"></div>
+      </div>
+    </section>
+
+    <!-- 7. CONTACT -->
+    <section class="info-section" style="animation-delay:0.35s">
+      <div class="section-header">
+        <div class="sec-icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 13a19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 3.6 2.18h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L7.91 9.91a16 16 0 0 0 6.18 6.18l1.88-1.88a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/>
+          </svg>
+        </div>
+        <h2><span id="sec-contact">संपर्क</span><small>Contact</small></h2>
+      </div>
+      <div class="section-body">
+
+        <div class="contact-cards" id="contact-cards"></div>
+
+        <div class="action-links">
+          <!-- Real WhatsApp SVG -->
+          <a class="action-btn whatsapp" id="action-wa" href="#" target="_blank" rel="noopener">
+            <svg width="20" height="20" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+              <path fill="white" d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/>
+            </svg>
+            WhatsApp
+          </a>
+
+          <!-- Real Google Maps pin SVG -->
+          <a class="action-btn maps" id="action-map" href="#" target="_blank" rel="noopener">
+            <svg width="20" height="20" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+              <path fill="white" d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/>
+            </svg>
+            नकाशा / Map
+          </a>
+
+          <!-- Print -->
+          <button class="action-btn print-btn" onclick="printPage()">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <polyline points="6 9 6 2 18 2 18 9"/><path d="M6 18H4a2 2 0 0 1-2-2v-5a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2v5a2 2 0 0 1-2 2h-2"/><rect x="6" y="14" width="12" height="8"/>
+            </svg>
+            प्रिंट
+          </button>
+
+          <!-- Share -->
+          <button class="action-btn share-btn" onclick="sharePage()">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <circle cx="18" cy="5" r="3"/><circle cx="6" cy="12" r="3"/><circle cx="18" cy="19" r="3"/>
+              <line x1="8.59" y1="13.51" x2="15.42" y2="17.49"/><line x1="15.41" y1="6.51" x2="8.59" y2="10.49"/>
+            </svg>
+            शेअर
+          </button>
+        </div>
+
+      </div>
+    </section>
+
+  </div><!-- /page-wrapper -->
+
+  <!-- Admin FAB -->
+  <button id="admin-fab" onclick="openAdminModal()" title="Admin Panel">
+    <svg viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+      <circle cx="12" cy="12" r="3"/>
+      <path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 0 1-2.83 2.83l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-4 0v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 0 1-2.83-2.83l.06-.06A1.65 1.65 0 0 0 4.68 15a1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1 0-4h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 0 1 2.83-2.83l.06.06A1.65 1.65 0 0 0 9 4.68a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 4 0v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 0 1 2.83 2.83l-.06.06A1.65 1.65 0 0 0 19.4 9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 0 4h-.09a1.65 1.65 0 0 0-1.51 1z"/>
+    </svg>
+  </button>
+
+</div><!-- /public-page -->
+
+
+<!-- ============================================
+     ADMIN PAGE
+     ============================================ -->
+<div id="admin-page" style="display:none">
+
+  <div class="admin-header">
+    <div class="admin-header-left">
+      <svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+        <circle cx="12" cy="12" r="3"/><path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 0 1-2.83 2.83l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-4 0v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 0 1-2.83-2.83l.06-.06A1.65 1.65 0 0 0 4.68 15a1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1 0-4h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 0 1 2.83-2.83l.06.06A1.65 1.65 0 0 0 9 4.68a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 4 0v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 0 1 2.83 2.83l-.06.06A1.65 1.65 0 0 0 19.4 9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 0 4h-.09a1.65 1.65 0 0 0-1.51 1z"/>
+      </svg>
+      <h2>Admin Panel — परिचयपत्र</h2>
+    </div>
+    <button class="btn-back-public" onclick="showPublicPage()">
+      <svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="19" y1="12" x2="5" y2="12"/><polyline points="12 19 5 12 12 5"/></svg>
+      सार्वजनिक पृष्ठ
+    </button>
+  </div>
+
+  <div class="admin-nav">
+    <button class="active" onclick="switchAdminPanel('panel-basic',this)">
+      <svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="7" width="20" height="14" rx="2"/><path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"/></svg>
+      मूलभूत
+    </button>
+    <button onclick="switchAdminPanel('panel-personal',this)">
+      <svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>
+      वैयक्तिक
+    </button>
+    <button onclick="switchAdminPanel('panel-horo',this)">
+      <svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+      कुंडली
+    </button>
+    <button onclick="switchAdminPanel('panel-edu',this)">
+      <svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 10v6M2 10l10-5 10 5-10 5z"/><path d="M6 12v5c3 3 9 3 12 0v-5"/></svg>
+      शिक्षण
+    </button>
+    <button onclick="switchAdminPanel('panel-career',this)">
+      <svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="7" width="20" height="14" rx="2"/><path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"/></svg>
+      नोकरी
+    </button>
+    <button onclick="switchAdminPanel('panel-family',this)">
+      <svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m3 9 9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg>
+      कुटुंब
+    </button>
+    <button onclick="switchAdminPanel('panel-gallery',this)">
+      <svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14.5 4h-5L7 7H4a2 2 0 0 0-2 2v9a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V9a2 2 0 0 0-2-2h-3l-2.5-3z"/><circle cx="12" cy="13" r="3"/></svg>
+      गॅलरी
+    </button>
+    <button onclick="switchAdminPanel('panel-contact',this)">
+      <svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 13a19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 3.6 2.18h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L7.91 9.91a16 16 0 0 0 6.18 6.18l1.88-1.88a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+      संपर्क
+    </button>
+    <button onclick="switchAdminPanel('panel-github',this)" style="background:linear-gradient(135deg,#24292e,#444d56);color:#fff">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M15 22v-4a4.8 4.8 0 0 0-1-3.5c3 0 6-2 6-5.5.08-1.25-.27-2.48-1-3.5.28-1.15.28-2.35 0-3.5 0 0-1 0-3 1.5-2.64-.5-5.36-.5-8 0C6 2 5 2 5 2c-.3 1.15-.3 2.35 0 3.5A5.403 5.403 0 0 0 4 9c0 3.5 3 5.5 6 5.5-.39.49-.68 1.05-.85 1.65-.17.6-.22 1.23-.15 1.85v4"/><path d="M9 18c-4.51 2-5-2-7-2"/></svg>
+      ⚙️ GitHub
+    </button>
+  </div>
+
+  <div class="admin-content">
+
+    <!-- Basic -->
+    <div class="admin-panel active" id="panel-basic">
+      <h3><svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg> मूलभूत माहिती</h3>
+      <div class="form-group"><label>नाव — मराठी</label><input type="text" id="adm-name-mr" placeholder="श्री. नाव"/></div>
+      <div class="form-group"><label>Name — English</label><input type="text" id="adm-name-en" placeholder="Full Name in English"/></div>
+      <div class="admin-footer-btns"><button class="btn-save" id="btn-save-main" onclick="adminSaveAll()"><svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M19 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11l5 5v11a2 2 0 0 1-2 2z"/><polyline points="17 21 17 13 7 13 7 21"/><polyline points="7 3 7 8 15 8"/></svg> जतन करा</button></div>
+    </div>
+
+    <!-- Personal -->
+    <div class="admin-panel" id="panel-personal">
+      <h3><svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg> वैयक्तिक माहिती</h3>
+      <div class="form-row">
+        <div class="form-group"><label>जन्म दिनांक — मराठी</label><input type="text" id="adm-dob-mr" placeholder="15 जून 1996"/></div><div class="form-group"><label>Date of Birth — English</label><input type="text" id="adm-dob-en" placeholder="15 June 1996"/></div>
+        <div class="form-group"><label>उंची — मराठी</label><input type="text" id="adm-height-mr" placeholder="5 फूट 8 इंच"/></div><div class="form-group"><label>Height — English</label><input type="text" id="adm-height-en" placeholder="5 ft 8 in (172 cm)"/></div>
+      </div>
+      <div class="form-row">
+        <div class="form-group"><label>वर्ण — मराठी</label><input type="text" id="adm-colour-mr" placeholder="गोरा"/></div><div class="form-group"><label>Complexion — English</label><input type="text" id="adm-colour-en" placeholder="Fair / Wheatish"/></div>
+        <div class="form-group"><label>जात / धर्म — मराठी</label><input type="text" id="adm-jat-mr" placeholder="मराठा / हिंदू"/></div><div class="form-group"><label>Caste / Religion — English</label><input type="text" id="adm-jat-en" placeholder="Maratha / Hindu"/></div>
+      </div>
+      <div class="form-row">
+        <div class="form-group"><label>कुलदैवत — मराठी</label><input type="text" id="adm-kuldaivat-mr" placeholder="श्री. भवानी माता"/></div><div class="form-group"><label>Kuldaivat — English</label><input type="text" id="adm-kuldaivat-en" placeholder="Shri Bhavani Mata"/></div>
+        <div class="form-group"><label>देवक — मराठी</label><input type="text" id="adm-devak-mr" placeholder="नारळ"/></div><div class="form-group"><label>Devak — English</label><input type="text" id="adm-devak-en" placeholder="Coconut"/></div>
+      </div>
+      <div class="form-group"><label>रक्तगट — मराठी</label><input type="text" id="adm-blood-mr" placeholder="B+"/></div><div class="form-group"><label>Blood Group — English</label><input type="text" id="adm-blood-en" placeholder="B+"/></div>
+      <div class="admin-footer-btns"><button class="btn-save" onclick="adminSaveAll()"><svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M19 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11l5 5v11a2 2 0 0 1-2 2z"/><polyline points="17 21 17 13 7 13 7 21"/><polyline points="7 3 7 8 15 8"/></svg> जतन करा</button></div>
+    </div>
+
+    <!-- Horoscope -->
+    <div class="admin-panel" id="panel-horo">
+      <h3><svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg> जन्मकुंडली माहिती</h3>
+      <div class="form-row">
+        <div class="form-group"><label>गण — मराठी</label><input type="text" id="adm-gan-mr" placeholder="देव गण"/></div><div class="form-group"><label>Gan — English</label><input type="text" id="adm-gan-en" placeholder="Dev Gan"/></div>
+        <div class="form-group"><label>नाडी — मराठी</label><input type="text" id="adm-nadi-mr" placeholder="अंत्य नाडी"/></div><div class="form-group"><label>Nadi — English</label><input type="text" id="adm-nadi-en" placeholder="Antya Nadi"/></div>
+      </div>
+      <div class="form-row">
+        <div class="form-group"><label>जन्मनक्षत्र — मराठी</label><input type="text" id="adm-nakshatra-mr" placeholder="रोहिणी"/></div><div class="form-group"><label>Birth Nakshatra — English</label><input type="text" id="adm-nakshatra-en" placeholder="Rohini"/></div>
+        <div class="form-group"><label>जन्मवेळ — मराठी</label><input type="text" id="adm-jamvel-mr" placeholder="रात्री ११:३०"/></div><div class="form-group"><label>Birth Time — English</label><input type="text" id="adm-jamvel-en" placeholder="Night 11:30"/></div>
+      </div>
+      <div class="admin-footer-btns"><button class="btn-save" onclick="adminSaveAll()"><svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M19 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11l5 5v11a2 2 0 0 1-2 2z"/><polyline points="17 21 17 13 7 13 7 21"/><polyline points="7 3 7 8 15 8"/></svg> जतन करा</button></div>
+    </div>
+
+    <!-- Education -->
+    <div class="admin-panel" id="panel-edu">
+      <h3><svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 10v6M2 10l10-5 10 5-10 5z"/><path d="M6 12v5c3 3 9 3 12 0v-5"/></svg> शैक्षणिक माहिती</h3>
+      <div class="form-group"><label>शैक्षणिक पात्रता — मराठी</label><input type="text" id="adm-qual-mr" placeholder="B.E."/></div><div class="form-group"><label>Qualification — English</label><input type="text" id="adm-qual-en" placeholder="B.E. (Computer Engineering)"/></div>
+      <div class="form-row">
+        <div class="form-group"><label>महाविद्यालय — मराठी</label><input type="text" id="adm-college-mr" placeholder="पुणे विद्यापीठ"/></div><div class="form-group"><label>College — English</label><input type="text" id="adm-college-en" placeholder="Pune University"/></div>
+        <div class="form-group"><label>उत्तीर्ण वर्ष — मराठी</label><input type="text" id="adm-year-mr" placeholder="2018"/></div><div class="form-group"><label>Passing Year — English</label><input type="text" id="adm-year-en" placeholder="2018"/></div>
+      </div>
+      <div class="admin-footer-btns"><button class="btn-save" onclick="adminSaveAll()"><svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M19 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11l5 5v11a2 2 0 0 1-2 2z"/><polyline points="17 21 17 13 7 13 7 21"/><polyline points="7 3 7 8 15 8"/></svg> जतन करा</button></div>
+    </div>
+
+    <!-- Career -->
+    <div class="admin-panel" id="panel-career">
+      <h3><svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="7" width="20" height="14" rx="2"/><path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"/></svg> नोकरी / व्यवसाय</h3>
+      <div class="form-group"><label>कंपनी — मराठी</label><input type="text" id="adm-company-mr" placeholder="TCS India"/></div><div class="form-group"><label>Company — English</label><input type="text" id="adm-company-en" placeholder="TCS India Pvt. Ltd."/></div>
+      <div class="form-row">
+        <div class="form-group"><label>पद — मराठी</label><input type="text" id="adm-desig-mr" placeholder="सॉफ्टवेअर इंजिनिअर"/></div><div class="form-group"><label>Designation — English</label><input type="text" id="adm-desig-en" placeholder="Software Engineer"/></div>
+        <div class="form-group"><label>वेतन — मराठी</label><input type="text" id="adm-salary-mr" placeholder="₹ 8,50,000 / वार्षिक"/></div><div class="form-group"><label>Salary — English</label><input type="text" id="adm-salary-en" placeholder="₹ 8,50,000 / Annually"/></div>
+      </div>
+      <div class="admin-footer-btns"><button class="btn-save" onclick="adminSaveAll()"><svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M19 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11l5 5v11a2 2 0 0 1-2 2z"/><polyline points="17 21 17 13 7 13 7 21"/><polyline points="7 3 7 8 15 8"/></svg> जतन करा</button></div>
+    </div>
+
+    <!-- Family -->
+    <div class="admin-panel" id="panel-family">
+      <h3><svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m3 9 9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z"/><polyline points="9 22 9 12 15 12 15 22"/></svg> कौटुंबिक माहिती</h3>
+
+      <div class="form-row"><div class="form-group"><label>👨 वडील — नाव (मराठी)</label><input type="text" id="adm-father-name-mr" placeholder="श्री. विनायक देशपांडे"/></div><div class="form-group"><label>Father Name — English</label><input type="text" id="adm-father-name-en" placeholder="Shri. Vinayak Deshpande"/></div><div class="form-group"><label>वडील व्यवसाय — मराठी</label><input type="text" id="adm-father-occ-mr" placeholder="शेती व्यवसाय"/></div><div class="form-group"><label>Father Occupation — English</label><input type="text" id="adm-father-occ-en" placeholder="Farming"/></div></div>
+      <div class="form-row"><div class="form-group"><label>👩 आई — नाव (मराठी)</label><input type="text" id="adm-mother-name-mr" placeholder="सौ. सुनीता देशपांडे"/></div><div class="form-group"><label>Mother Name — English</label><input type="text" id="adm-mother-name-en" placeholder="Sau. Sunita Deshpande"/></div><div class="form-group"><label>आई व्यवसाय — मराठी</label><input type="text" id="adm-mother-occ-mr" placeholder="गृहिणी"/></div><div class="form-group"><label>Mother Occupation — English</label><input type="text" id="adm-mother-occ-en" placeholder="Homemaker"/></div></div>
+
+      <hr style="border:none;border-top:1px solid rgba(200,144,42,0.18);margin:18px 0"/>
+
+      <!-- Sisters -->
+      <div style="margin-bottom:18px">
+        <p style="font-family:'Cormorant Garamond',serif;font-size:1rem;color:var(--primary);font-weight:600;margin-bottom:8px;">👧 बहिणी (Sisters)</p>
+        <div id="adm-sisters-entries" class="dynamic-entries"></div>
+        <div class="form-row" style="margin-top:8px">
+          <input type="text" id="adm-sisters-new-name-mr" placeholder="नाव (मराठी)" style="padding:8px 10px;border:1px solid #ddd;border-radius:6px;font-family:'Jost',sans-serif;font-size:0.88rem;outline:none"/>
+          <input type="text" id="adm-sisters-new-name-en" placeholder="Name (English)" style="padding:8px 10px;border:1px solid #ddd;border-radius:6px;font-family:'Jost',sans-serif;font-size:0.88rem;outline:none"/>
+          <input type="text" id="adm-sisters-new-occupation-mr" placeholder="व्यवसाय (मराठी)" style="padding:8px 10px;border:1px solid #ddd;border-radius:6px;font-family:'Jost',sans-serif;font-size:0.88rem;outline:none"/>
+          <input type="text" id="adm-sisters-new-occupation-en" placeholder="Occupation (English)" style="padding:8px 10px;border:1px solid #ddd;border-radius:6px;font-family:'Jost',sans-serif;font-size:0.88rem;outline:none"/>
+          <input type="text" id="adm-sisters-new-married-mr" placeholder="विवाहित/अविवाहित" style="padding:8px 10px;border:1px solid #ddd;border-radius:6px;font-family:'Jost',sans-serif;font-size:0.88rem;outline:none"/>
+          <input type="text" id="adm-sisters-new-married-en" placeholder="Married/Unmarried" style="padding:8px 10px;border:1px solid #ddd;border-radius:6px;font-family:'Jost',sans-serif;font-size:0.88rem;outline:none"/>
+        </div>
+        <button class="btn-add" onclick="addFamilyMember('adm-sisters',['name','occupation','married'])"><svg viewBox="0 0 24 24" fill="none" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg> बहीण जोडा</button>
+      </div>
+
+      <!-- Brothers -->
+      <div style="margin-bottom:18px">
+        <p style="font-family:'Cormorant Garamond',serif;font-size:1rem;color:var(--primary);font-weight:600;margin-bottom:8px;">👦 भाऊ (Brothers)</p>
+        <div id="adm-brothers-entries" class="dynamic-entries"></div>
+        <div class="form-row" style="margin-top:8px">
+          <input type="text" id="adm-brothers-new-name-mr" placeholder="नाव (मराठी)" style="padding:8px 10px;border:1px solid #ddd;border-radius:6px;font-family:'Jost',sans-serif;font-size:0.88rem;outline:none"/>
+          <input type="text" id="adm-brothers-new-name-en" placeholder="Name (English)" style="padding:8px 10px;border:1px solid #ddd;border-radius:6px;font-family:'Jost',sans-serif;font-size:0.88rem;outline:none"/>
+          <input type="text" id="adm-brothers-new-occupation-mr" placeholder="व्यवसाय (मराठी)" style="padding:8px 10px;border:1px solid #ddd;border-radius:6px;font-family:'Jost',sans-serif;font-size:0.88rem;outline:none"/>
+          <input type="text" id="adm-brothers-new-occupation-en" placeholder="Occupation (English)" style="padding:8px 10px;border:1px solid #ddd;border-radius:6px;font-family:'Jost',sans-serif;font-size:0.88rem;outline:none"/>
+          <input type="text" id="adm-brothers-new-married-mr" placeholder="विवाहित/अविवाहित" style="padding:8px 10px;border:1px solid #ddd;border-radius:6px;font-family:'Jost',sans-serif;font-size:0.88rem;outline:none"/>
+          <input type="text" id="adm-brothers-new-married-en" placeholder="Married/Unmarried" style="padding:8px 10px;border:1px solid #ddd;border-radius:6px;font-family:'Jost',sans-serif;font-size:0.88rem;outline:none"/>
+        </div>
+        <button class="btn-add" onclick="addFamilyMember('adm-brothers',['name','occupation','married'])"><svg viewBox="0 0 24 24" fill="none" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg> भाऊ जोडा</button>
+      </div>
+
+      <!-- Mamas -->
+      <div style="margin-bottom:18px">
+        <p style="font-family:'Cormorant Garamond',serif;font-size:1rem;color:var(--primary);font-weight:600;margin-bottom:8px;">🧔 मामा</p>
+        <div id="adm-mamas-entries" class="dynamic-entries"></div>
+        <div class="form-row" style="margin-top:8px">
+          <input type="text" id="adm-mamas-new-name-mr" placeholder="नाव (मराठी)" style="padding:8px 10px;border:1px solid #ddd;border-radius:6px;font-family:'Jost',sans-serif;font-size:0.88rem;outline:none"/>
+          <input type="text" id="adm-mamas-new-name-en" placeholder="Name (English)" style="padding:8px 10px;border:1px solid #ddd;border-radius:6px;font-family:'Jost',sans-serif;font-size:0.88rem;outline:none"/>
+          <input type="text" id="adm-mamas-new-relation-mr" placeholder="नाते (मराठी)" style="padding:8px 10px;border:1px solid #ddd;border-radius:6px;font-family:'Jost',sans-serif;font-size:0.88rem;outline:none"/>
+          <input type="text" id="adm-mamas-new-relation-en" placeholder="Relation (English)" style="padding:8px 10px;border:1px solid #ddd;border-radius:6px;font-family:'Jost',sans-serif;font-size:0.88rem;outline:none"/>
+          <input type="text" id="adm-mamas-new-location-mr" placeholder="ठिकाण (मराठी)" style="padding:8px 10px;border:1px solid #ddd;border-radius:6px;font-family:'Jost',sans-serif;font-size:0.88rem;outline:none"/>
+          <input type="text" id="adm-mamas-new-location-en" placeholder="Location (English)" style="padding:8px 10px;border:1px solid #ddd;border-radius:6px;font-family:'Jost',sans-serif;font-size:0.88rem;outline:none"/>
+        </div>
+        <button class="btn-add" onclick="addFamilyMember('adm-mamas',['name','relation','location'])"><svg viewBox="0 0 24 24" fill="none" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg> मामा जोडा</button>
+      </div>
+
+      <!-- Mushis -->
+      <div style="margin-bottom:18px">
+        <p style="font-family:'Cormorant Garamond',serif;font-size:1rem;color:var(--primary);font-weight:600;margin-bottom:8px;">👩‍🦱 मावशी</p>
+        <div id="adm-mushis-entries" class="dynamic-entries"></div>
+        <div class="form-row" style="margin-top:8px">
+          <input type="text" id="adm-mushis-new-name-mr" placeholder="नाव (मराठी)" style="padding:8px 10px;border:1px solid #ddd;border-radius:6px;font-family:'Jost',sans-serif;font-size:0.88rem;outline:none"/>
+          <input type="text" id="adm-mushis-new-name-en" placeholder="Name (English)" style="padding:8px 10px;border:1px solid #ddd;border-radius:6px;font-family:'Jost',sans-serif;font-size:0.88rem;outline:none"/>
+          <input type="text" id="adm-mushis-new-relation-mr" placeholder="नाते (मराठी)" style="padding:8px 10px;border:1px solid #ddd;border-radius:6px;font-family:'Jost',sans-serif;font-size:0.88rem;outline:none"/>
+          <input type="text" id="adm-mushis-new-relation-en" placeholder="Relation (English)" style="padding:8px 10px;border:1px solid #ddd;border-radius:6px;font-family:'Jost',sans-serif;font-size:0.88rem;outline:none"/>
+          <input type="text" id="adm-mushis-new-location-mr" placeholder="ठिकाण (मराठी)" style="padding:8px 10px;border:1px solid #ddd;border-radius:6px;font-family:'Jost',sans-serif;font-size:0.88rem;outline:none"/>
+          <input type="text" id="adm-mushis-new-location-en" placeholder="Location (English)" style="padding:8px 10px;border:1px solid #ddd;border-radius:6px;font-family:'Jost',sans-serif;font-size:0.88rem;outline:none"/>
+        </div>
+        <button class="btn-add" onclick="addFamilyMember('adm-mushis',['name','relation','location'])"><svg viewBox="0 0 24 24" fill="none" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg> मावशी जोडा</button>
+      </div>
+
+      <!-- Chultas -->
+      <div style="margin-bottom:18px">
+        <p style="font-family:'Cormorant Garamond',serif;font-size:1rem;color:var(--primary);font-weight:600;margin-bottom:8px;">👴 चुलते</p>
+        <div id="adm-chultas-entries" class="dynamic-entries"></div>
+        <div class="form-row" style="margin-top:8px">
+          <input type="text" id="adm-chultas-new-name-mr" placeholder="नाव (मराठी)" style="padding:8px 10px;border:1px solid #ddd;border-radius:6px;font-family:'Jost',sans-serif;font-size:0.88rem;outline:none"/>
+          <input type="text" id="adm-chultas-new-name-en" placeholder="Name (English)" style="padding:8px 10px;border:1px solid #ddd;border-radius:6px;font-family:'Jost',sans-serif;font-size:0.88rem;outline:none"/>
+          <input type="text" id="adm-chultas-new-occupation-mr" placeholder="व्यवसाय (मराठी)" style="padding:8px 10px;border:1px solid #ddd;border-radius:6px;font-family:'Jost',sans-serif;font-size:0.88rem;outline:none"/>
+          <input type="text" id="adm-chultas-new-occupation-en" placeholder="Occupation (English)" style="padding:8px 10px;border:1px solid #ddd;border-radius:6px;font-family:'Jost',sans-serif;font-size:0.88rem;outline:none"/>
+          <input type="text" id="adm-chultas-new-location-mr" placeholder="ठिकाण (मराठी)" style="padding:8px 10px;border:1px solid #ddd;border-radius:6px;font-family:'Jost',sans-serif;font-size:0.88rem;outline:none"/>
+          <input type="text" id="adm-chultas-new-location-en" placeholder="Location (English)" style="padding:8px 10px;border:1px solid #ddd;border-radius:6px;font-family:'Jost',sans-serif;font-size:0.88rem;outline:none"/>
+        </div>
+        <button class="btn-add" onclick="addFamilyMember('adm-chultas',['name','occupation','location'])"><svg viewBox="0 0 24 24" fill="none" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg> चुलते जोडा</button>
+      </div>
+
+      <div class="admin-footer-btns"><button class="btn-save" onclick="adminSaveFamilyParents()"><svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M19 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11l5 5v11a2 2 0 0 1-2 2z"/><polyline points="17 21 17 13 7 13 7 21"/><polyline points="7 3 7 8 15 8"/></svg> जतन करा</button></div>
+    </div>
+
+    <!-- Gallery -->
+    <div class="admin-panel" id="panel-gallery">
+      <h3><svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14.5 4h-5L7 7H4a2 2 0 0 0-2 2v9a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V9a2 2 0 0 0-2-2h-3l-2.5-3z"/><circle cx="12" cy="13" r="3"/></svg> गॅलरी व्यवस्थापन</h3>
+      <p style="font-size:0.83rem;color:var(--text-light);margin-bottom:14px;">फोटो जोडा किंवा काढा. JPG, PNG, WEBP सपोर्ट.</p>
+      <div class="admin-gallery-grid" id="admin-gallery-grid"></div>
+      <label class="btn-add" style="display:inline-flex;cursor:pointer">
+        <svg viewBox="0 0 24 24" fill="none" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg>
+        फोटो जोडा
+        <input type="file" accept="image/*" multiple onchange="handleGalleryUpload(this)" style="display:none"/>
+      </label>
+    </div>
+
+    <!-- Contact -->
+    <div class="admin-panel" id="panel-contact">
+      <h3><svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 13a19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 3.6 2.18h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L7.91 9.91a16 16 0 0 0 6.18 6.18l1.88-1.88a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg> संपर्क माहिती</h3>
+
+      <div id="adm-contacts" class="dynamic-entries"></div>
+
+      <div style="background:var(--cream);border:var(--border);border-radius:var(--radius-sm);padding:14px;margin-top:10px">
+        <p style="font-size:0.75rem;font-weight:600;color:var(--text-light);text-transform:uppercase;letter-spacing:1px;margin-bottom:10px">नवीन संपर्क जोडा</p>
+        <div class="form-row">
+          <div class="form-group" style="margin-bottom:0"><label>नाव — मराठी</label><input type="text" id="new-cname-mr" placeholder="श्री. नाव"/></div>
+          <div class="form-group" style="margin-bottom:0"><label>Name — English</label><input type="text" id="new-cname-en" placeholder="Shri. Name"/></div>
+        </div>
+        <div class="form-row">
+          <div class="form-group" style="margin-bottom:0"><label>नाते — मराठी</label><input type="text" id="new-crel-mr" placeholder="वडील / आई / स्वतः"/></div>
+          <div class="form-group" style="margin-bottom:0"><label>Relation — English</label><input type="text" id="new-crel-en" placeholder="Father / Mother / Self"/></div>
+        </div>
+        <div class="form-group" style="margin-top:10px"><label>मोबाईल नंबर</label><input type="tel" id="new-cphone" placeholder="+91 98765 43210"/></div>
+        <button class="btn-add" onclick="addContact()"><svg viewBox="0 0 24 24" fill="none" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg> संपर्क जोडा</button>
+      </div>
+
+      <hr style="border:none;border-top:1px solid rgba(200,144,42,0.18);margin:18px 0"/>
+      <div class="form-group"><label>WhatsApp नंबर (91 ने सुरू करा)</label><input type="text" id="adm-wa" placeholder="919123456789"/></div>
+      <div class="form-group"><label>Google Maps लिंक</label><input type="text" id="adm-map" placeholder="https://maps.google.com/?q=..."/></div>
+      <div class="form-group"><label>पत्ता — मराठी</label><input type="text" id="adm-address-mr" placeholder="मु. पो. गाव, ता. तालुका, जि. जिल्हा"/></div><div class="form-group"><label>Address — English</label><input type="text" id="adm-address-en" placeholder="Village, Taluka, District"/></div>
+      <div class="admin-footer-btns"><button class="btn-save" onclick="adminSaveAll()"><svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M19 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11l5 5v11a2 2 0 0 1-2 2z"/><polyline points="17 21 17 13 7 13 7 21"/><polyline points="7 3 7 8 15 8"/></svg> जतन करा</button></div>
+    </div>
+
+  <!-- GitHub Settings Panel -->
+    <div class="admin-panel" id="panel-github">
+      <h3>
+        <svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M15 22v-4a4.8 4.8 0 0 0-1-3.5c3 0 6-2 6-5.5.08-1.25-.27-2.48-1-3.5.28-1.15.28-2.35 0-3.5 0 0-1 0-3 1.5-2.64-.5-5.36-.5-8 0C6 2 5 2 5 2c-.3 1.15-.3 2.35 0 3.5A5.403 5.403 0 0 0 4 9c0 3.5 3 5.5 6 5.5-.39.49-.68 1.05-.85 1.65-.17.6-.22 1.23-.15 1.85v4"/><path d="M9 18c-4.51 2-5-2-7-2"/></svg>
+        GitHub Connection Settings
+      </h3>
+
+      <div style="background:#fffbeb;border:1px solid #f59e0b;border-radius:8px;padding:14px;margin-bottom:18px;font-size:0.85rem;line-height:1.6;">
+        <strong>📋 Setup Steps:</strong><br>
+        1. Create a free GitHub account at <b>github.com</b><br>
+        2. Create a new <b>public repository</b> (e.g. <code>my-biodata</code>)<br>
+        3. Enable <b>GitHub Pages</b> in repo Settings → Pages → Branch: main<br>
+        4. Go to GitHub → Settings → Developer Settings → <b>Personal Access Tokens (Classic)</b><br>
+        5. Generate token with <b>repo</b> scope checked<br>
+        6. Fill the fields below and click <b>Save Settings</b><br>
+        7. Upload your <code>index.html</code>, <code>app.js</code>, <code>style.css</code> files to the repo<br>
+        8. Click <b>Test Connection</b> then save any data — it creates <code>data.json</code> automatically!
+      </div>
+
+      <div class="form-row">
+        <div class="form-group">
+          <label>GitHub Username (Owner)</label>
+          <input type="text" id="gh-owner" placeholder="your-github-username"/>
+        </div>
+        <div class="form-group">
+          <label>Repository Name</label>
+          <input type="text" id="gh-repo" placeholder="my-biodata"/>
+        </div>
+      </div>
+      <div class="form-row">
+        <div class="form-group">
+          <label>Branch</label>
+          <input type="text" id="gh-branch" placeholder="main" value="main"/>
+        </div>
+        <div class="form-group">
+          <label>Personal Access Token (PAT)</label>
+          <input type="password" id="gh-token" placeholder="ghp_xxxxxxxxxxxx"/>
+        </div>
+      </div>
+
+      <div style="display:flex;gap:10px;flex-wrap:wrap;margin-top:6px;">
+        <button class="btn-save" onclick="saveGithubSettings()">
+          <svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M19 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11l5 5v11a2 2 0 0 1-2 2z"/><polyline points="17 21 17 13 7 13 7 21"/><polyline points="7 3 7 8 15 8"/></svg>
+          Save Settings
+        </button>
+        <button class="btn-add" onclick="testGithubConnection()" style="background:#24292e;color:#fff;border:none;">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M15 22v-4a4.8 4.8 0 0 0-1-3.5c3 0 6-2 6-5.5.08-1.25-.27-2.48-1-3.5.28-1.15.28-2.35 0-3.5 0 0-1 0-3 1.5-2.64-.5-5.36-.5-8 0C6 2 5 2 5 2c-.3 1.15-.3 2.35 0 3.5A5.403 5.403 0 0 0 4 9c0 3.5 3 5.5 6 5.5-.39.49-.68 1.05-.85 1.65-.17.6-.22 1.23-.15 1.85v4"/><path d="M9 18c-4.51 2-5-2-7-2"/></svg>
+          Test Connection
+        </button>
+      </div>
+
+      <div style="margin-top:22px;background:#f0fdf4;border:1px solid #86efac;border-radius:8px;padding:14px;font-size:0.82rem;line-height:1.7;">
+        <strong>🌐 Your site URL after setup:</strong><br>
+        <code>https://&lt;your-username&gt;.github.io/&lt;repo-name&gt;/</code><br><br>
+        <strong>🔒 Token Safety:</strong> Your token is stored only in <em>this browser's</em> localStorage — never in GitHub or visible to visitors. Keep your token private.
+      </div>
+    </div>
+
+  </div>
+</div><!-- /admin-page -->
+
+
+<!-- LIGHTBOX -->
+<div id="lightbox">
+  <button class="lb-close">
+    <svg viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
+  </button>
+  <img src="" alt=""/>
+</div>
+
+<!-- ADMIN PASSWORD MODAL -->
+<div class="pwd-modal" id="pwd-modal">
+  <div class="pwd-box">
+    <div class="pb-icon"><svg viewBox="0 0 24 24" fill="none" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="11" width="18" height="11" rx="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg></div>
+    <h3>Admin Access</h3>
+    <p>Admin पासवर्ड टाका<br><small>Enter admin password</small></p>
+    <div class="pwd-input-wrap">
+      <svg viewBox="0 0 24 24" fill="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="11" width="18" height="11" rx="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg>
+      <input type="password" id="adminPwdInput" placeholder="••••••••" autocomplete="off"/>
+    </div>
+    <button onclick="checkAdminPassword()">प्रवेश करा</button>
+    <div class="pwd-error">❌ चुकीचा पासवर्ड</div>
+  </div>
+</div>
+
+<!-- TOAST -->
+<div class="toast" id="toast"></div>
+
+
+
+<script src="app.js"></script>
+</body>
+</html>
